@@ -1,0 +1,26 @@
+web:
+  image: 'gitlab/gitlab-ce:latest'
+  restart: always
+#  hostname: 'gitlab.bwc.top'
+  environment:
+    GITLAB_OMNIBUS_CONFIG: |
+      external_url '<IP>:8939'
+      gitlab_rails['gitlab_shell_ssh_port'] = 2224
+      gitlab_rails['smtp_enable'] = true
+      gitlab_rails['smtp_address'] = "smtp.qq.com"
+      gitlab_rails['smtp_port'] = 465
+      gitlab_rails['smtp_user_name'] = "youremail@qq.com"
+      gitlab_rails['smtp_password'] = "your verified code, not password"
+      gitlab_rails['smtp_authentication'] = "login"
+      gitlab_rails['smtp_enable_starttls_auto'] = true
+      gitlab_rails['smtp_tls'] = true
+      gitlab_rails['gitlab_email_from'] = 'youremail@qq.com'
+      gitlab_rails['smtp_domain'] = "qq.com"  
+  ports:
+    - '8939:8939'
+    - '2224:22'
+  volumes:
+    - '$GITLAB_HOME/config:/etc/gitlab'
+    - '$GITLAB_HOME/logs:/var/log/gitlab'
+    - '$GITLAB_HOME/data:/var/opt/gitlab'
+
