@@ -17,6 +17,6 @@ docker exec <container's ID> -it /bin/bash
 gitlab-rails console
 u.password='qweqweqwe'
 u.password_confirmation='qweqweqwe'
-u.save
+u.save!
 ```
-Now, you can log in with root acount via <ip>:8939
+Now, you can log in with root acount via <ip>:8939, and the password 'qweqweqwe'
