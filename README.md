@@ -3,7 +3,7 @@ This repository teach you how to build your own github-gitlab within container
 #Prerequisite
 You have installed docker and docker-compose
 #Quikely start
-1. Choose your gitlab 'HOME_DIR' and set the environment variable 'GITLAB_HOME', e.g.
+1. Choose your gitlab ·HOME_DIR· and set the environment variable 'GITLAB_HOME', e.g.
 '''bash
 export GITLAB_HOME=$HOME/gitlab
 '''
