@@ -2,6 +2,7 @@ web:
   image: 'gitlab/gitlab-ce:latest'
   restart: always
 #  hostname: 'gitlab.bwc.top'
+  container_name: gitlab
   environment:
     GITLAB_OMNIBUS_CONFIG: |
       external_url '<IP>:8939'
