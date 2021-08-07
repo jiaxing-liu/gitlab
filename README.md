@@ -12,8 +12,7 @@ export GITLAB_HOME=$HOME/gitlab
 3. Do not worry! It need a few minutes for the container to be healthy. You can use 'docker ps' to check the status of the container.
 
 When the container is healthy, step in it and execute 'gitlab-rails console'
-''',bash:
-'''
+'''shell
 docker exec <container's ID> -it /bin/bash
 gitlab-rails console
 u.password='qweqweqwe'
